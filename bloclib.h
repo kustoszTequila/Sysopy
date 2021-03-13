@@ -17,5 +17,5 @@ struct pairBlock
 
 
 struct blockArray createBlockArray ( int size);
-struct pairBlock createPairBlock(int BlockSize);
+struct pairBlock createPairBlock(int pntArrSize);
 void deleteLine(struct blockArray blckArray, int index, int lineIndex);

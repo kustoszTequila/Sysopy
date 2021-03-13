@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct pairBlock* createPairBlock (int pntArrSize)
+struct pairBlock createPairBlock (int pntArrSize)
 {
-	if ( BlockSize <= 0 )
+	if ( pntArrSize <= 0 )
 	{
 		return NULL;
 	}
@@ -28,22 +28,22 @@ struct pairBlock* createPairBlock (int pntArrSize)
 
 struct blockArray createBlockArray (int size)
 {
-	struct blockArray blckArray = calloc(1,sizeof(struct blockArray));
+	struct blockArray blckArray ;
 
 	blckArray.blockArray= (struct pairBlock*) calloc (size, sizeof(struct pairBlock));
 	blckArray.blockArraySize = size;
 	blckArray.index = -1;
 
-    return array;
+    return blckArray;
 }
 int addBlock (char* fileName, struct blockArray blckArray)
 {
 	struct pairBlock prBlock ;
 	// pomocnicza funkcja
-	blockArray.pairBlock[blockArray.blockArraySize + 1 ] = prBlock;
-	blockArray.blockArraySize ++;
+	blckArray.blockArray[blckArray.blockArraySize + 1 ] = prBlock;
+	blckArray.blockArraySize ++;
 	
-	return blockArray.blockArraySize
+	return blckArray.blockArraySize;
 }
 void mergeFiles(char* name1, char* name2)
 {
@@ -87,10 +87,10 @@ void deleteLine(struct blockArray blckArray, int index, int lineIndex)
 		return;
 	else if ( index < blckArray.blockArraySize)
 	{
-		if (lineIndex < blckArray[index].pntArrSize)
+		if (lineIndex < blckArray.blockArray[index].pntArrSize)
 		{
-			free(blckArray[index].pntArr[lineIndex]);
-			
+			free(blckArray.blockArray[index].pntArr[lineIndex]);
+			blckArray.blockArray[index].pntArrSize--;
 		}
 	}
 
@@ -99,9 +99,10 @@ void deleteBlock (struct blockArray blckArray, int index)
 {
 	if (index >= blckArray.blockArraySize || index < 0 )
 		{
-			return 
+			return ;
 		}
 	
-	free(blckArray.pairBlock[index];
+	free(blckArray.blockArray[index].pntArr);
+	blckArray.blockArray[index].pntArrSize = 0;
 
 }
