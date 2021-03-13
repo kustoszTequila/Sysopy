@@ -1,21 +1,36 @@
+#ifndef bloclib_h
+#define bloclib_h
 
-
-struct blockArray
+struct Block
 {
-	int blockArraySize;
-	int index;
-	struct pairBlock* blockArray;
+	int size; // number of rows
+	char** text;
+};
+
+struct Pair
+{
+	int size; // number of rows (merged)
+	char* name1;
+	char* name2;
+	char* margedName;
 
 };
 
-struct pairBlock
+struct Sequence
 {
+	int size; // how many pairs
+	struct Pair* pairs; 
 
-	int pntArrSize;
-	char** pntArr;
 };
 
+struct Block* createBlock ( char* margedFile, int size);
+struct Pair* createPair (char* name1, char* name2);
+struct Sequence* createSequence(char **args,int size);
 
-struct blockArray createBlockArray ( int size);
-struct pairBlock createPairBlock(int pntArrSize);
-void deleteLine(struct blockArray blckArray, int index, int lineIndex);
+void deleteBlock(struct Block** blockArr, int index);
+void deleteLine(struct Block* block, int line);
+int howManyLines(struct Block* block);
+
+void printFile(struct Block* block);
+
+#endif

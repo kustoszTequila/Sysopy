@@ -1,76 +1,86 @@
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "bloclib.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-struct pairBlock createPairBlock (int pntArrSize)
+struct Block* createBlock ( char* mergedFile, int size)
 {
-	if ( pntArrSize <= 0 )
-	{
-		return NULL;
-	}
+	struct Block* block = calloc(1,sizeof(struct Block));
+	block->size = size;
+	block->text = calloc(size,sizeof(char*));
 	
-	else
-	{
-		struct pairBlock * pntArr = calloc (1, sizeof( struct pairBlock));
-		
-		pntArr->pntArrSize = pntArrSize;
-		
-		char **tmp = (char** ) calloc ( pntArrSize, sizeof( char* ));
-		pntArr->pntArr = tmp;
-		
-		return pntArr;
-	}
-}
-
-struct blockArray createBlockArray (int size)
-{
-	struct blockArray blckArray ;
-
-	blckArray.blockArray= (struct pairBlock*) calloc (size, sizeof(struct pairBlock));
-	blckArray.blockArraySize = size;
-	blckArray.index = -1;
-
-    return blckArray;
-}
-int addBlock (char* fileName, struct blockArray blckArray)
-{
-	struct pairBlock prBlock ;
-	// pomocnicza funkcja
-	blckArray.blockArray[blckArray.blockArraySize + 1 ] = prBlock;
-	blckArray.blockArraySize ++;
+	int i = 0;
 	
-	return blckArray.blockArraySize;
+	FILE * fp1;
+
+	char * line = NULL;
+	size_t len = 0;
+	ssize_t read;
+
+    	fp1 = fopen(mergedFile, "r");
+
+	while (read = getline(&line, &len, fp1) != -1)
+	{
+		block->text[i] = malloc(1 + strlen(line));
+	 	strcpy(block->text[i], line);
+	 	i++;
+	}
+	fclose(fp1);
+
+	return block;
 }
-void mergeFiles(char* name1, char* name2)
+struct Pair* createPair (char* name1, char* name2)
+{
+	struct Pair* pair = calloc(1,sizeof(struct Pair));
+	strcpy(pair->name1,name1); 
+	strcpy(pair->name2,name2); 
+	pair ->size = 0;
+	return pair;
+
+}
+struct Sequence* createSequence(char **args,int size);
+
+
+void mergeFiles(struct Pair* pair)
 {
 	 FILE * fp1;
 	 FILE * fp2;
 	 FILE * fp3;
-	    
+	 
+	int howManyLines = 0;
 	char * line = NULL;
 	size_t len = 0;
 	ssize_t read;
-		
-    	fp1 = fopen(name1, "r");
-    	fp2 = fopen(name2, "r");
-    	fp3 = fopen("tmp.txt", "w"); 
+	
+       char * str3 = (char *) malloc(1 + strlen(pair->name1)+ strlen(pair->name2) );
+       strcpy(str3, pair->name1);
+       strcat(str3, pair->name2);
+	
+    	fp1 = fopen(pair->name1, "r");
+    	fp2 = fopen(pair->name2, "r");
+    	fp3 = fopen(str3, "w"); 
 	int eof1 = 0;
 	int eof2 = 0;
 	
 	while (eof1 != 1 && eof2 !=1)
 	{
 	 if ( read = getline(&line, &len, fp1) != -1 && strlen(line) > 1)
+	 {
 	 	fprintf(fp3,"%s",line);
+	 	howManyLines++;
+	 }
+	 	
 	 	
 	 else if (strlen(line) != 1)
 	 	eof1 =1;
 	 
 	 if ( read = getline(&line, &len, fp2) != -1 && strlen(line) > 1)
+	 {
 	 	fprintf(fp3,"%s",line);
+	 	howManyLines++;
+	 }
 	 else if (strlen(line) != 1 )
 	 	eof2 = 1;
 
@@ -79,30 +89,37 @@ void mergeFiles(char* name1, char* name2)
     fclose(fp1);
     fclose(fp2);
     fclose(fp3);
-
+    
+    pair->margedName = (char *) malloc(1 + strlen(pair->name1)+ strlen(pair->name2) );
+    strcpy(pair->margedName,str3);
+    free(str3);
+    pair->size = howManyLines;
 }
-void deleteLine(struct blockArray blckArray, int index, int lineIndex)
+
+void deleteBlock(struct Block** blockArr, int index)
 {
-	if (index < 0 || lineIndex < 0 )
-		return;
-	else if ( index < blckArray.blockArraySize)
+
+	free(blockArr[index]);
+}
+
+void deleteLine(struct Block* block, int line)
+{
+	free(block->text[line]);
+}
+
+int howManyLines(struct Block* block)
+{
+	return block->size;
+}
+
+void printFile(struct Block* block)
+{
+
+	for (int i =0; i< block->size; i++)
 	{
-		if (lineIndex < blckArray.blockArray[index].pntArrSize)
-		{
-			free(blckArray.blockArray[index].pntArr[lineIndex]);
-			blckArray.blockArray[index].pntArrSize--;
-		}
+		if (strlen(block->text[i]) > 1)
+			printf("%s \n",block->text[i]);
 	}
 
-}
-void deleteBlock (struct blockArray blckArray, int index)
-{
-	if (index >= blckArray.blockArraySize || index < 0 )
-		{
-			return ;
-		}
-	
-	free(blckArray.blockArray[index].pntArr);
-	blckArray.blockArray[index].pntArrSize = 0;
 
 }
