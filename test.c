@@ -1,11 +1,8 @@
-#include "bloclib.h"
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-
-
+#include "bloclib.h"
 struct BlockArray* createBlockArray(int howManyPairs)
 {
 	struct BlockArray* bArray = calloc(1,sizeof(struct BlockArray));
@@ -33,7 +30,7 @@ struct Block* createBlock ( char* mergedFile, int size)
 
     	fp1 = fopen(mergedFile, "r");
 
-	while ((read = getline(&line, &len, fp1)) != -1)
+	while (read = getline(&line, &len, fp1) != -1)
 	{
 		block->text[i] = malloc(1 + strlen(line));
 	 	strcpy(block->text[i], line);
@@ -101,7 +98,7 @@ void mergeFiles(struct Pair* pair)
 	
 	while (eof1 != 1 && eof2 !=1)
 	{
-	 if ( (read = getline(&line, &len, fp1) != -1) && strlen(line) > 1)
+	 if ( read = getline(&line, &len, fp1) != -1 && strlen(line) > 1)
 	 {
 	 	fprintf(fp3,"%s",line);
 	 	howManyLines++;
@@ -111,7 +108,7 @@ void mergeFiles(struct Pair* pair)
 	 else if (strlen(line) != 1)
 	 	eof1 =1;
 	 
-	 if ( (read = getline(&line, &len, fp2) != -1) && strlen(line) > 1)
+	 if ( read = getline(&line, &len, fp2) != -1 && strlen(line) > 1)
 	 {
 	 	fprintf(fp3,"%s",line);
 	 	howManyLines++;
@@ -157,4 +154,19 @@ void printFile(struct Block* block)
 	}
 
 
+}
+int main()
+{
+	char ** arg;
+	arg = calloc(2,sizeof(char*));
+	arg[0] = "a.txt";
+	arg[1] = "b.txt";
+	struct BlockArray* bArray = createBlockArray(2);
+	struct Sequence* seq = createSequence(arg,2);
+	mergeFiles(seq->pairs[0]);
+	addBlock(bArray,seq->pairs[0]->margedName,seq->pairs[0]->size);
+	/*struct Block* block = createBlock(seq->pairs[0]->margedName,seq->pairs[0]->size);
+	deleteLine(block,1);*/
+	printFile(bArray->blocks[0]);
+	return 0;
 }
