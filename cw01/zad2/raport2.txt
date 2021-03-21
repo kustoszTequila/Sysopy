@@ -1,0 +1,130 @@
+Creating table of size: 1 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 1 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 1 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 4 
+Mergin: 8 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 16 
+Mergin: 32 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 64 
+Mergin: 128 files 
+Real time: 0.080000 
+User time: 0.010000 
+System time: 0.040000 
+---END--- 
+Creating table of size: 10 
+Mergin: 12 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 5  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Mergin: 8 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 2  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 2 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 

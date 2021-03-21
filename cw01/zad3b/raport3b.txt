@@ -1,0 +1,597 @@
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 6 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 16 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 64 files 
+Real time: 0.040000 
+User time: 0.000000 
+System time: 0.030000 
+---END--- 
+Mergin: 12 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 6 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 16 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 64 files 
+Real time: 0.130000 
+User time: 0.000000 
+System time: 0.020000 
+---END--- 
+Mergin: 12 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 6 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 16 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 64 files 
+Real time: 0.020000 
+User time: 0.000000 
+System time: 0.020000 
+---END--- 
+Mergin: 12 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 6 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 16 files 
+Real time: 0.020000 
+User time: 0.000000 
+System time: 0.010000 
+---END--- 
+Mergin: 64 files 
+Real time: 0.020000 
+User time: 0.000000 
+System time: 0.020000 
+---END--- 
+Mergin: 12 files 
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 6 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 16 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 64 files 
+Real time: 0.030000 
+User time: 0.000000 
+System time: 0.020000 
+---END--- 
+Mergin: 12 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 2 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 6 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 16 files 
+Real time: 0.020000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Mergin: 64 files 
+Real time: 0.030000 
+User time: 0.000000 
+System time: 0.030000 
+---END--- 
+Mergin: 12 files 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+
+KOMENTARZ: Najszybszy wynik otrzymano przy flagach -O2 i -O3, dla flag -Os i -O0 czas nie zmienił się, albo zmienił się niewiele, natomiast dla flagi -O1 nastapiło 3 - krotne zwiększenie czasu działania programu
+
