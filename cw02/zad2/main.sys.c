@@ -6,7 +6,27 @@
 #include <sys/types.h> 
 #include <sys/stat.h>
 #include <errno.h>
+#include <ctype.h>
+#include <sys/times.h>
+#include <time.h>
 
+FILE* result;
+
+double timeDiff(clock_t end, clock_t begin) {
+    return  ((double)(end - begin) / sysconf( _SC_CLK_TCK));
+}
+void saveTime(clock_t begining, clock_t ending, struct tms* tBegin, struct tms* tEnd)
+{
+    fprintf(result, "Sys time: \n");
+    fprintf(result, "Real time: %lf \n",timeDiff(ending,begining));
+    
+    fprintf(result,"User time: %lf \n", (timeDiff(tEnd->tms_utime,tBegin->tms_utime)));
+    fprintf(result, "System time: %lf \n", timeDiff(tEnd->tms_stime, tBegin->tms_stime));
+    
+    printf("Real time: %lf \n", timeDiff(ending,begining));
+    printf("User time: %lf \n", (timeDiff(tEnd->tms_utime,tBegin->tms_utime)));
+    printf("System time: %lf \n", timeDiff(tEnd->tms_stime, tBegin->tms_stime));
+}
 int main (int arg, char** argv)
 {
 
@@ -36,8 +56,18 @@ int main (int arg, char** argv)
 		perror("Error while saving files' names");
 		exit(-1);
 	}
+		    int operations = 3;
+	    clock_t opTime[operations] ;
+	    struct tms* Times[operations];
+
+	    for (int i = 0; i < operations ; i++)
+	    {
+	    	opTime[i] = 0;
+	    	Times[i] = calloc(1, sizeof(struct tms*));
+	    }
 	int fp1;
 	fp1 = open(name2,O_RDONLY);
+		result = fopen("pomiar_zad_2.txt","a");
 	if (fp1 == 0 )
 	{
 		perror("Error while opening the files");
@@ -51,6 +81,7 @@ int main (int arg, char** argv)
 		perror("Błąd alokacji");
 		exit(-1);
 	}
+	opTime[0] = times(Times[0]);
 	while (read(fp1,&charac,1) > 0)
 	{	line[size] = charac;
 		size++;
@@ -70,8 +101,12 @@ int main (int arg, char** argv)
 			size = 0;
 		}
 	}
-
+		opTime[1] = times(Times[1]);
+	saveTime(opTime[0],opTime[1],
+	Times[0],Times[1]);
+	
 	close(fp1);
+	fclose(result);
 	free(name2);
 	free(line);
 	return 0;
