@@ -1,0 +1,227 @@
+Creating table of size: 1 
+Mergin: 2 files 
+Child Process, pid: 4276, Parent Pid: 4275
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 1 
+Mergin: 2 files 
+Child Process, pid: 4281, Parent Pid: 4279
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 1 
+Mergin: 2 files 
+Child Process, pid: 4285, Parent Pid: 4284
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 4 
+Mergin: 8 files 
+Child Process, pid: 4288, Parent Pid: 4287
+Child Process, pid: 4289, Parent Pid: 4287
+Child Process, pid: 4290, Parent Pid: 4287
+Child Process, pid: 4291, Parent Pid: 4287
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 16 
+Mergin: 32 files 
+Child Process, pid: 4294, Parent Pid: 4293
+Child Process, pid: 4295, Parent Pid: 4293
+Child Process, pid: 4296, Parent Pid: 4293
+Child Process, pid: 4297, Parent Pid: 4293
+Child Process, pid: 4298, Parent Pid: 4293
+Child Process, pid: 4299, Parent Pid: 4293
+Child Process, pid: 4300, Parent Pid: 4293
+Child Process, pid: 4301, Parent Pid: 4293
+Child Process, pid: 4302, Parent Pid: 4293
+Child Process, pid: 4303, Parent Pid: 4293
+Child Process, pid: 4304, Parent Pid: 4293
+Child Process, pid: 4305, Parent Pid: 4293
+Child Process, pid: 4306, Parent Pid: 4293
+Child Process, pid: 4307, Parent Pid: 4293
+Child Process, pid: 4308, Parent Pid: 4293
+Child Process, pid: 4309, Parent Pid: 4293
+Real time: 0.020000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
+Creating table of size: 64 
+Mergin: 128 files 
+Child Process, pid: 4312, Parent Pid: 4311
+Child Process, pid: 4313, Parent Pid: 4311
+Child Process, pid: 4314, Parent Pid: 4311
+Child Process, pid: 4315, Parent Pid: 4311
+Child Process, pid: 4316, Parent Pid: 4311
+Child Process, pid: 4317, Parent Pid: 4311
+Child Process, pid: 4318, Parent Pid: 4311
+Child Process, pid: 4319, Parent Pid: 4311
+Child Process, pid: 4320, Parent Pid: 4311
+Child Process, pid: 4321, Parent Pid: 4311
+Child Process, pid: 4322, Parent Pid: 4311
+Child Process, pid: 4323, Parent Pid: 4311
+Child Process, pid: 4324, Parent Pid: 4311
+Child Process, pid: 4325, Parent Pid: 4311
+Child Process, pid: 4326, Parent Pid: 4311
+Child Process, pid: 4327, Parent Pid: 4311
+Child Process, pid: 4328, Parent Pid: 4311
+Child Process, pid: 4329, Parent Pid: 4311
+Child Process, pid: 4330, Parent Pid: 4311
+Child Process, pid: 4331, Parent Pid: 4311
+Child Process, pid: 4332, Parent Pid: 4311
+Child Process, pid: 4333, Parent Pid: 4311
+Child Process, pid: 4334, Parent Pid: 4311
+Child Process, pid: 4335, Parent Pid: 4311
+Child Process, pid: 4336, Parent Pid: 4311
+Child Process, pid: 4337, Parent Pid: 4311
+Child Process, pid: 4338, Parent Pid: 4311
+Child Process, pid: 4339, Parent Pid: 4311
+Child Process, pid: 4340, Parent Pid: 4311
+Child Process, pid: 4341, Parent Pid: 4311
+Child Process, pid: 4342, Parent Pid: 4311
+Child Process, pid: 4343, Parent Pid: 4311
+Child Process, pid: 4344, Parent Pid: 4311
+Child Process, pid: 4345, Parent Pid: 4311
+Child Process, pid: 4346, Parent Pid: 4311
+Child Process, pid: 4347, Parent Pid: 4311
+Child Process, pid: 4349, Parent Pid: 4311
+Child Process, pid: 4358, Parent Pid: 4311
+Child Process, pid: 4359, Parent Pid: 4311
+Child Process, pid: 4360, Parent Pid: 4311
+Child Process, pid: 4361, Parent Pid: 4311
+Child Process, pid: 4362, Parent Pid: 4311
+Child Process, pid: 4363, Parent Pid: 4311
+Child Process, pid: 4364, Parent Pid: 4311
+Child Process, pid: 4365, Parent Pid: 4311
+Child Process, pid: 4366, Parent Pid: 4311
+Child Process, pid: 4367, Parent Pid: 4311
+Child Process, pid: 4369, Parent Pid: 4311
+Child Process, pid: 4370, Parent Pid: 4311
+Child Process, pid: 4371, Parent Pid: 4311
+Child Process, pid: 4372, Parent Pid: 4311
+Child Process, pid: 4373, Parent Pid: 4311
+Child Process, pid: 4374, Parent Pid: 4311
+Child Process, pid: 4375, Parent Pid: 4311
+Child Process, pid: 4376, Parent Pid: 4311
+Child Process, pid: 4377, Parent Pid: 4311
+Child Process, pid: 4378, Parent Pid: 4311
+Child Process, pid: 4379, Parent Pid: 4311
+Child Process, pid: 4380, Parent Pid: 4311
+Child Process, pid: 4381, Parent Pid: 4311
+Child Process, pid: 4382, Parent Pid: 4311
+Child Process, pid: 4383, Parent Pid: 4311
+Child Process, pid: 4384, Parent Pid: 4311
+Child Process, pid: 4385, Parent Pid: 4311
+Real time: 0.150000 
+User time: 0.000000 
+System time: 0.010000 
+---END--- 
+Creating table of size: 10 
+Mergin: 12 files 
+Child Process, pid: 4388, Parent Pid: 4387
+Child Process, pid: 4389, Parent Pid: 4387
+Child Process, pid: 4390, Parent Pid: 4387
+Child Process, pid: 4391, Parent Pid: 4387
+Child Process, pid: 4392, Parent Pid: 4387
+Child Process, pid: 4393, Parent Pid: 4387
+Real time: 0.130000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 0 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 0  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 3  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 4  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 5  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 4 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 3 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Mergin: 8 files 
+Child Process, pid: 4395, Parent Pid: 4387
+Child Process, pid: 4396, Parent Pid: 4387
+Child Process, pid: 4397, Parent Pid: 4387
+Child Process, pid: 4398, Parent Pid: 4387
+Real time: 0.010000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 1  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Saving to : 2  blocks 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 1 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+Removing block of index: 2 
+Real time: 0.000000 
+User time: 0.000000 
+System time: 0.000000 
+---END--- 
