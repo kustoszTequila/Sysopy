@@ -2,16 +2,17 @@
 #define chat_h
 
 
-#define PROJECT_ID 0x099
+#define CHAT_ID 0x099
 #define MSG_MAXS 4056
-#define CLIENTS_MAX  12
+#define CLIENTS_MAX 12
 
-enum mtype {
-    LIST = 1, 
-    CONNECT = 2, 
-    DISCONNECT = 3, 
-    STOP = 4,
-    INIT = 5
+enum mtype { 
+    DISCONNECT = 1, 
+    STOP = 2,
+    LIST = 3, 
+    CONNECT = 4,
+    INIT = 5,
+    CHAT = 6
 }; 
 
 struct messageText 
@@ -21,9 +22,10 @@ struct messageText
 
 struct message 
 {
-    long mType;
+    long mtype;
     key_t mKey;
     int qid;
+    pid_t sndPid;
     struct messageText messageT;
 };
 
