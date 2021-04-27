@@ -1,0 +1,6 @@
+1. Potoki nazwane działają dla wielu procesów.
+2. Dla N >= 1000 następuje Stack Smashing protection
+Dla N < 1000:
+3. 1 Konsument - Wielu Producentów: wszystko działa poprawnie
+4. Wielu Konsumentów - Jeden Producent: zapisuje się poprawnie
+5. Wielu Konsumentów - Wielu Producentów: zapisuje się tylko ostania linijka 
