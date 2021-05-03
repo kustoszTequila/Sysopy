@@ -5,9 +5,9 @@ all: clean compile test
 
 compile:
 	make clean
-	$(CC) -o main main.c
-	$(CC) -o maker maker.c -lrt
-	$(CC) -o provider provider.c 
+	$(CC) -o main main.c -lrt -lpthread
+	$(CC) -o maker maker.c -lrt -lpthread
+	$(CC) -o provider provider.c -lrt -lpthread
 test:
 	make compile
 	./main 3 5

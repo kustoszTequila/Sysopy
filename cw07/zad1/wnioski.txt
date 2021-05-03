@@ -1,0 +1,3 @@
+Przygotowanie pizzy zajmuje mniej czasu niż jej dostarczenie i powrót. Z tego powodu lepiej mnieć więcej dostawców niż kucharzy.
+Dla wartości N,M < 5 kucharze rzadziej się blokują, jest to też zależne od liczby dostawców.
+Dla wartości N,M > 5 kucharze cały czas się blokuja i siedzą bezczynnnie, dlatego robienie liczby kucharzy większej niż pojemność pieca jest bezsensowne. U dostawców również następują blokady, jednak rzadziej niż u kucharzy.

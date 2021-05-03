@@ -1,21 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <unistd.h> 
-#include <time.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/msg.h>
-#include <sys/stat.h>
-#include <signal.h>
-#include <sys/sem.h>
-#include <sys/ipc.h>
-#include <sys/types.h>
-#include <sys/shm.h>
-
 #include "pizza.h"
 
 int semId;
@@ -40,13 +22,12 @@ void makeSem()
 
 	union semun arg;
 	arg.val = 0;
-	for (int i = 0; i < SEMNUM;i++)
-	{
-		semctl(semId,i,SETVAL,arg);
-	}
+	semctl(semId,2,SETVAL,arg); // index for maker
+	semctl(semId,3,SETVAL,arg); // index for provider
+	semctl(semId,4,SETVAL,arg); // table (provider's side)
 	arg.val = 5;
-	semctl(semId,1,SETVAL,arg);
-	semctl(semId,2,SETVAL,arg);
+	semctl(semId,0,SETVAL,arg); // piec
+	semctl(semId,1,SETVAL,arg); // table (maker's side)
 
 }
 void makeMem()
@@ -59,8 +40,19 @@ void makeMem()
 		exit(1);		
 	}
 }
+void clear()
+{
+    semctl(semId, 0, IPC_RMID, NULL);
+    shmctl(memId, IPC_RMID, NULL);
+}
+void handler(int signum)
+{
+	clear();
+	exit(1);
+}
 int main (int argc, char **argv)
 {
+	signal(SIGINT,handler);
 	int N,M;
 	if (argc != 3)
 	{
@@ -77,19 +69,21 @@ int main (int argc, char **argv)
 		printf("N and M must be positive\n");
 		exit(1);
 	}
-	pid_t makerPid[N];
-	pid_t providerPid[N];
+
 	makeSem();
 	makeMem();
 
 	for (int i =0; i < N; i++)
 	{
 		pid_t child = fork();
+		
 		if (child == 0)
 		{
+			
 			execlp("./maker", "maker", NULL);
+			
 		}
-		makerPid[i] = child;
+		sleep(1);
 	}
 
 	for (int i =0; i < M; i++)
@@ -97,10 +91,15 @@ int main (int argc, char **argv)
 		pid_t child = fork();
 		if (child == 0)
 		{
-			//execlp("./provider", "provider", NULL);
+			execlp("./provider", "provider", NULL);
 		}
-		providerPid[i] = child;
+		sleep(1);
 	}
-	sleep(15);
+	for(int i =0;i < N+M; i++)
+	{
+		wait(NULL);
+	}
+	clear();
+	printf("END OF MAIN\n");
 	return 0;
 }

@@ -1,21 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <unistd.h> 
-#include <time.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/msg.h>
-#include <sys/stat.h>
-#include <signal.h>
-#include <sys/sem.h>
-#include <sys/ipc.h>
-#include <sys/types.h>
-#include <sys/shm.h>
-
 #include "pizza.h"
 
 int semId;
@@ -45,30 +27,34 @@ void setMemId()
 void work()
 {
     // zabieramy pizze ze stołu (jeśli jest)
-    struct sembuf* startSem = calloc(2,sizeof(struct sembuf));
-    startSem[0].sem_num = 5;
+    struct sembuf* startSem = calloc(3,sizeof(struct sembuf));
+    startSem[0].sem_num = 4;
     startSem[0].sem_op = -1;
     startSem[0].sem_flg = 0;
 
-    startSem[2].sem_num = 4;
+    startSem[2].sem_num = 3;
     startSem[2].sem_op = 1;
     startSem[2].sem_flg = 0;
 
-    startSem[1].sem_num = 2;
+    startSem[1].sem_num = 1;
     startSem[1].sem_op = 1;
     startSem[1].sem_flg = 0;
-    semop(semId,startSem,3);   
+    
+    semop(semId,startSem,3);  
+     
     // bierzemy ja z tablicy
     struct pizza *piz = shmat(memId, NULL, 0);
-    int indeks = (semctl(semId,4,GETVAL, NULL)) - 1;
+    int indeks = (semctl(semId,3,GETVAL, NULL)) - 1;
     indeks = indeks % CAPACITY;
     int num = piz->number[indeks];
-    int pizzas = (semctl(semId,5,GETVAL,NULL)) - 1;
+    int pizzas = (semctl(semId,4,GETVAL,NULL));
     printf("(%d %ld) Pobieram pizze: %d Liczba pizz na stole: %d.\n",(int)getpid(),time(0),num,pizzas);
-    sleep(5);
+    shmdt(piz);
 
-    printf("(%d %ld) Dostarczam pizze: %n \n",(int)getpid(),time(0),num);
-    sleep(5);   
+    usleep(((rand() % (5 - 4 + 1) + 4) * 1000000));
+    printf("(%d %ld) Dostarczam pizze: %d \n",(int)getpid(),time(0),num);
+
+    usleep(((rand() % (5 - 4 + 1) + 4) * 1000000)); 
     printf("(%d %ld) Wróciłem\n",(int)getpid(),time(0));
 }
 int main (int argc, char **argv)
