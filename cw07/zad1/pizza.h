@@ -14,6 +14,7 @@
 #include <sys/sem.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include <sys/wait.h>
 
 #define CAPACITY 5 // Max capacity of oven 
 #define SEMNUM 5 // number of semators

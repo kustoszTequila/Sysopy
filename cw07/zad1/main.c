@@ -13,26 +13,56 @@ union semun
 void makeSem()
 {
 	key_t key = ftok(getenv("HOME"),'A');
+	if (key == -1)
+	{
+		perror("Error with ftok\n");
+		exit(1);
+	}
 	semId = semget(key,(SEMNUM),IPC_CREAT | 0666);
 	if (semId < 0 )
 	{
-		printf("ERROR while creating semaphore\n");
+		perror("ERROR while creating semaphore\n");
 		exit(1);
 	}
 
 	union semun arg;
 	arg.val = 0;
-	semctl(semId,2,SETVAL,arg); // index for maker
-	semctl(semId,3,SETVAL,arg); // index for provider
-	semctl(semId,4,SETVAL,arg); // table (provider's side)
+	if ( semctl(semId,2,SETVAL,arg) < 0)// index for maker
+	{
+		perror("Error with semctl\n");
+		exit(1);
+	} 
+	if (semctl(semId,3,SETVAL,arg) < 0 ) // index for provider
+	{
+		perror("Error with semctl\n");
+		exit(1);
+	} 
+	if (semctl(semId,4,SETVAL,arg) < 0) // table (provider's side)
+	{
+		perror("Error with semctl\n");
+		exit(1);
+	} 
 	arg.val = 5;
-	semctl(semId,0,SETVAL,arg); // piec
-	semctl(semId,1,SETVAL,arg); // table (maker's side)
+	if ( semctl(semId,0,SETVAL,arg) < 0 )// piec
+	{
+		perror("Error with semctl\n");
+		exit(1);
+	} 
+	if (semctl(semId,1,SETVAL,arg) < 0) // table (maker's side)
+	{
+		perror("Error with semctl\n");
+		exit(1);
+	} 
 
 }
 void makeMem()
 {
 	key_t key = ftok(getenv("HOME"),'B');
+	if (key < 0)
+	{
+		perror("Error with ftok\n");
+		exit(1);
+	}
 	memId = shmget(key,sizeof(struct pizza),IPC_CREAT | 0666);
 	if (memId < 0)
 	{
@@ -42,8 +72,17 @@ void makeMem()
 }
 void clear()
 {
-    semctl(semId, 0, IPC_RMID, NULL);
-    shmctl(memId, IPC_RMID, NULL);
+    if (semctl(semId, 0, IPC_RMID, NULL) < 0)
+	{		
+		perror("Error with semctl\n");
+		exit(1);		
+	}
+    if (shmctl(memId, IPC_RMID, NULL) < 0 )
+	{
+		perror("Error with ftok\n");
+		exit(1);
+	}
+	
 }
 void handler(int signum)
 {

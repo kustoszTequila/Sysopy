@@ -34,8 +34,11 @@ void work(int num)
     startSem->sem_num = 0;
     startSem->sem_op = -1;
     startSem->sem_flg = 0;
-    semop(semId,startSem,1);
-    
+    if (semop(semId,startSem,1) < 0)
+    {
+        perror("Error with semop\n");
+        exit(1);
+    }   
     int amount = 5 - (semctl(semId,0,GETVAL,NULL));
     printf("(%d %ld) Dodałem pizze: %d. Liczba pizz w piecu: %d\n",(int)getpid(),time(0),num,amount);
 
@@ -46,7 +49,11 @@ void work(int num)
     midSem->sem_num = 0;
     midSem->sem_op = 1;
     midSem->sem_flg = 0;
-    semop(semId,midSem,1);
+    if (semop(semId,midSem,1) < 0)
+    {
+        perror("Error with semop\n");
+        exit(1);
+    }
     // zabieramy jedno miejsce ze stołu
     struct sembuf* endSem = calloc(3,sizeof(struct sembuf));
     endSem[2].sem_num = 2;
@@ -61,7 +68,11 @@ void work(int num)
     endSem[1].sem_op =  1;
     endSem[1].sem_flg = 0;
     
-    semop(semId,endSem,3);  
+    if ( semop(semId,endSem,3) < 0)
+    {
+        perror("Error with semop");
+        exit(1);
+    } 
     
     // dodajemy pizze do tablicy 
     struct pizza *piz = shmat(memId, NULL, 0);
