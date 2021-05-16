@@ -10,7 +10,6 @@ int n;
 int W,H,M;
 int** Img;
 int** newImg;
-
 void loadPGM(char* input)
 {
     printf("INPUT %s\n",input);
@@ -31,15 +30,17 @@ void loadPGM(char* input)
     printf("%d %d %d \n",W,H,M);
     Img = calloc(H,sizeof(int*));
     newImg = calloc(H,sizeof(int*));
-    for (int i = 0;i < W;i++)
+    for (int i = 0;i < H;i++)
     {
         Img[i] = calloc(W,sizeof(int));
         newImg[i] = calloc(W,sizeof(int));
     }
     int iter = 0;
     int in1 = 0;
+    
     while(fscanf(fp,"%s",ch) == 1)
     {
+        
         Img[in1][iter] = atoi(ch);
         iter ++;
         if (iter % W == 0)
@@ -50,6 +51,7 @@ void loadPGM(char* input)
     }
 
     fclose(fp);
+    
 }
 void savePGM(char* output)
 {
@@ -83,7 +85,7 @@ void *blocks(void *arg)
     if (end >= W)
         end = W -1;
     if (start < 0)
-        start = W -1;
+        start = 0;
     for (int i = start ; i <= end; i++ )
     {
         for(int j = 0; j < H; j++)
@@ -110,15 +112,15 @@ void *numbers(void *arg)
     if (end >= W)
         end = W -1;
     if (start < 0)
-        start = W -1;
+        start = 0;
 
     for(int i = 0 ; i < H; i++)
     {
         for (int j = 0 ; j < W; j++)
         {
-            if (Img[j][i]>=start && Img[j][i] < end)
+            if (Img[i][j]>=start && Img[i][j] <= end)
             {
-                newImg[j][i] = 255 - Img[j][i];
+                newImg[i][j] = 255 - Img[i][j];
             }
         }
     }
@@ -158,16 +160,23 @@ int main(int argc, char** argv)
         perror("wrong number of arguments!\n");
         exit(1);
     }
-   // printf("%d\n",n);
-   // printf("%s %s %s \n",type,input,output);
+
     char* realInput = calloc(1,strlen(input) + 1 + strlen("./Images/"));
+    if (realInput == NULL)
+    {
+        perror("Error while allocating memory\n");
+        exit(1);
+    }
     strcat(realInput,"./Images/");
     strcat(realInput,input);
     free(input);
+    // load PGM
     loadPGM(realInput);
+
     struct timeval start,end;
     pthread_t threads[n];
     gettimeofday(&start,NULL);
+    // Run every thread
     for (int i = 0; i<n; i++)
     {
         
@@ -199,27 +208,49 @@ int main(int argc, char** argv)
             exit(1);
         }
     }
-    printf("Type: %s\n",type);
+
+    // Open raport file
+    FILE* raport = fopen("Times.txt","a");
+    if (raport == NULL)
+    {
+        perror("Errow while opening raport file\n");
+        exit(1);
+    }
+    fprintf(raport,"Name %s, number of threads: %d\n",realInput,n);
+
+    // Wait for threads to finish
     for (int i = 0; i < n; i++)
     {
         unsigned int *tim;
         pthread_join(threads[i], (void **) &tim);
         printf("Thread num. %d, spent: %u microsecunds\n",i+1,*tim);
+        fprintf(raport,"Thread num. %d, spent: %u microsecunds\n",i+1,*tim);
     }
+
     gettimeofday(&end,NULL);
     unsigned int *tim = malloc(sizeof(unsigned int));
     *tim = end.tv_usec - start.tv_usec;
+      
     printf("Main,time spent: %u microsecunds\n",*tim);
+    fprintf(raport,"Main,time spent: %u microsecunds\n",*tim);
 
-    char* realOutput = calloc(1,strlen(input) + 1 + strlen("./Negative/"));
+    char* realOutput = calloc(1,strlen(output) + 1 + strlen("./Negative/"));
+    if (realOutput == NULL)
+    {
+        perror("Error while allcating memory\n");
+        exit(10);
+    }
     strcat(realOutput ,"./Negative/");
     strcat(realOutput,output);
     free(output);
+    // Save PGM
     savePGM(realOutput);
-
+    fclose(raport);
+    // deallocate memory
     free(type);
     free(realInput);
     free(realOutput);
+    free(tim);
 
     return 0;
 
