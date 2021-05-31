@@ -4,16 +4,6 @@ int semId;
 int memId;
 
 
-void setSemId()
-{
-    key_t key = ftok(getenv("HOME"),'A');
-    semId = semget(key,0,0);
-    if (semId < 0)
-    {
-        perror("(Maker) Error while getting semId \n");
-        exit(1);
-    } 
-}
 void setMemId()
 {
     key_t key = ftok(getenv("HOME"),'B');
