@@ -19,7 +19,7 @@ struct Client
 {
     char nick [NICK_LEN];
     int socket;
-    int rival;
+    int rival; // rival's socket
     int isOnline; // 0 - no, 1 - yes
 
 };

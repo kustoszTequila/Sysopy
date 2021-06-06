@@ -50,6 +50,7 @@ void joinServer()
     name = calloc(1,1 + strlen(nick));
     strcpy(name,nick);
     send(server,name,MSG_LEN,0);
+    printf("WYSŁANO\n");
 }
 void showGrid()
 {
@@ -69,20 +70,22 @@ void checkWin()
     int won = 0;
     for (int i = 0; i < 3; i++)
     {
-        if( board[i][0] == board[i][1] && board[i][1] == board[i][2])
+        if( board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ')
         {
             won = 1;
+            break;
         }
-        if(board[0][i] == board[1][i] && board[1][i] == board[2][i])
+        else if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ')
         {
             won = 1;
+            break;
         }
     }
-    if(board[0][0] == board[4][4] && board[4][4] == board[8][8])
+    if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ')
         {
             won = 1;
         }
-    if(board[2][2] == board[4][4] && board[4][4] == board[6][6])
+    else if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[1][1] != ' ')
         {
             won = 1;
         }
@@ -92,7 +95,7 @@ void checkWin()
         send(server,"WON",MSG_LEN,0);
         exit(0);
     }  
-    if(moves == 9)
+    else if(moves == 9)
     {
         printf("DRAW\n");
         send(server,"DRAW",MSG_LEN,0);
@@ -107,7 +110,7 @@ void nextMove()
         scanf("%d",&num);
         if (num >= 1 && num <= 9)
         {
-            if (board[(int)((num - 1) / 3)][(num-1) % 3] == ' ')
+            if (board[(int)((num - 1) / 3)][(num-1) % 3] != ' ')
             {
                 printf("THIS PLACE IS ALREADY TAKEN\n");
             }
@@ -129,13 +132,18 @@ void nextMove()
     send(server,pos,MSG_LEN,0);
     
 }
+void quit(int signum)
+{
+    send(server,"QUIT",MSG_LEN,0);
+    exit(1);
+}
 void work()
 {
     struct pollfd* pol = malloc(sizeof(struct pollfd));
     pol->fd = server;
     pol->events = POLLIN;
 
-
+    printf("USER COMMUNICATION START \n");
     while(1)
     {   
         poll(pol,1,-1);
@@ -147,12 +155,14 @@ void work()
         if (strcmp("PING",message) == 0)
         {
             send(server,"PING",MSG_LEN,0);
+            printf("PING RECEIVED\n");
         }
         else if (strcmp("X",message) == 0)
         {
             myFigure = 'X';
             rivalFigure = 'O';
             printf("YOUR FIGURE IS: %c \n",myFigure);
+            showGrid();
         }
         else if (strcmp("O",message) == 0)
         {
@@ -166,7 +176,7 @@ void work()
         }
         else if (strcmp("WON",message) == 0)
        {
-            printf("WON\n");
+            printf("LOST\n");
             exit(0);
         }
         else if (strcmp("DRAW",message) == 0 )
@@ -176,7 +186,7 @@ void work()
         }
         else if (strcmp("LOST",message) == 0)
         {
-            printf("LOST\n");
+            printf("WON\n");
             exit(0);
         }
         else if (strcmp("TAKEN",message) == 0)
@@ -189,15 +199,20 @@ void work()
             printf("NO FREE OPONENTS, PLEASE WAIT \n");
 
         }
-        else if (message[0] >= '1' && message[0] <= 9 && strlen(message) == 1)
+        else if (message[0] >= '1' && message[0] <= '9' && strlen(message) == 1)
         {
             moves++;
-            int pos = (int)(message[0]);
-            board[(int)((pos - 1) / 3)][(pos-1) % 3] = message[0];
+            int pos = message[0] - '0';
+            board[(int)((pos - 1) / 3)][(pos-1) % 3] = rivalFigure;
             showGrid();
             printf("YOUR TURN\n");
             nextMove();
             printf("\n");
+        }
+        else if (strcmp("QUIT",message) == 0)
+        {
+            printf("QUITING\n");
+            exit(0);
         }
         else
         {
@@ -213,7 +228,7 @@ int main(int argc, char** argv)
         perror("Wron number of arguments\n");
         exit(1);
     }
-
+    signal(SIGINT,&quit);
     // set the nick
     if (strlen(argv[1]) > NICK_LEN)
     {
