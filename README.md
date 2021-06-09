@@ -1,1 +1,2 @@
 # Sysopy
+Naresczie kurwa koniec
